@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Project Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>ArchPortal</h1>
+      <p>Architecture Project Presentation Portal</p>
+    </div>
+    <span class="tag">Student Edition</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">DESIGN • REVIEW • IMPROVE</p>
+        <h2>Manage your architecture projects</h2>
+        <p>Present designs, track revisions and collect feedback in one place.</p>
+      </div>
+      <button id="newProjectBtn">+ New Project</button>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>Total Projects</span>
+        <strong id="projectCount">0</strong>
+      </div>
+      <div class="stat">
+        <span>Total Proposals</span>
+        <strong id="proposalCount">0</strong>
+      </div>
+      <div class="stat">
+        <span>Approved Designs</span>
+        <strong id="approvedCount">0</strong>
+      </div>
+    </section>
+
+    <section class="panel" id="projectFormPanel" hidden>
+      <h3>Create a Project</h3>
+      <form id="projectForm">
+        <label for="projectName">Project name</label>
+        <input id="projectName" required placeholder="e.g. Modern Family House">
+
+        <label for="projectDescription">Description</label>
+        <textarea id="projectDescription" required
+          placeholder="Describe your architecture project"></textarea>
+
+        <label for="projectOwner">Student / Architect name</label>
+        <input id="projectOwner" placeholder="Enter your name">
+
+        <div class="actions">
+          <button type="submit">Save Project</button>
+          <button type="button" class="secondary" id="cancelProjectBtn">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section">
+      <h3>Your Projects</h3>
+      <div id="projectList" class="project-grid"></div>
+    </section>
+
+    <section id="detailSection" class="panel" hidden>
+      <div class="detail-heading">
+        <div>
+          <p class="eyebrow">PROJECT WORKSPACE</p>
+          <h2 id="detailName"></h2>
+          <p id="detailDescription"></p>
+          <p class="muted" id="detailOwner"></p>
+        </div>
+        <button class="secondary" id="closeDetailBtn">Close</button>
+      </div>
+
+      <hr>
+
+      <h3>Design Proposals</h3>
+      <form id="proposalForm">
+        <label for="proposalName">Proposal name</label>
+        <input id="proposalName" required placeholder="e.g. Front Elevation Design">
+
+        <label for="proposalImage">Image URL (optional)</label>
+        <input id="proposalImage" type="url"
+          placeholder="https://example.com/design.jpg">
+
+        <label for="proposalNotes">Design notes</label>
+        <textarea id="proposalNotes"
+          placeholder="Materials, concepts or other details"></textarea>
+
+        <button type="submit">+ Add Proposal</button>
+      </form>
+
+      <div id="proposalList" class="proposal-grid"></div>
+    </section>
+
+    <p class="footer">ArchPortal • Architecture Design & Review</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

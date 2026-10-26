@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #243247;
+  line-height: 1.6;
+}
+
+.topbar {
+  background: #172b40;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.topbar p {
+  margin: 3px 0 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.tag {
+  border: 1px solid #718096;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 28px 20px;
+}
+
+.welcome {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 3px 15px #172b4010;
+}
+
+.welcome h2 {
+  margin: 5px 0;
+  font-size: 28px;
+}
+
+.welcome p {
+  color: #64748b;
+}
+
+.eyebrow {
+  color: #b8793d !important;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+button {
+  background: #b8793d;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 17px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.88;
+}
+
+.secondary {
+  background: #e7edf3;
+  color: #243247;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 22px 0 32px;
+}
+
+.stat, .panel, .project-card, .proposal-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 15px #172b400a;
+}
+
+.stat span {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 29px;
+  margin-top: 5px;
+}
+
+.section h3, .panel h3 {
+  margin-top: 0;
+}
+
+.project-grid, .proposal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.project-card h4, .proposal-card h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.project-card p, .proposal-card p {
+  color: #64748b;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.project-card {
+  border-top: 4px solid #b8793d;
+}
+
+.project-card button {
+  margin-top: 10px;
+}
+
+.panel {
+  margin: 25px 0;
+}
+
+label {
+  display: block;
+  margin: 13px 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font: inherit;
+  background: white;
+}
+
+textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+form > button {
+  margin-top: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.detail-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.detail-heading h2 {
+  margin: 0;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 13px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 25px 0;
+}
+
+.proposal-card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e2e8f0;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  background: #fff0d9;
+  color: #8b571a;
+}
+
+.status.Approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.Rejected, 
+.status.needs-changes {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.version {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.comment-list {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.comment-list li {
+  margin: 7px 0;
+  overflow-wrap: anywhere;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card-actions button {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.empty {
+  background: white;
+  color: #64748b;
+  padding: 22px;
+  border-radius: 10px;
+  grid-column: 1 / -1;
+}
+
+.footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 30px 0 10px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 750px) {
+  .project-grid, .proposal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-grid, .proposal-grid, .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 16px 5%;
+  }
+
+  .container {
+    padding: 18px 12px;
+  }
+
+  .welcome {
+    padding: 20px;
+  }
+}
